@@ -5,6 +5,9 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "AITech | Premium AI Tool & SaaS Directory",
   description: "Discover the best AI tools and SaaS solutions. Expert reviews and free alternatives for modern professionals.",
+  verification: {
+    google: "-z9DAPzX-Yzd8hPw-wDCrYLW13maGYRSDCWd1o9ifd8",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
