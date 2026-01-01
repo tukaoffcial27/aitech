@@ -4,6 +4,9 @@ import { notFound } from 'next/navigation';
 import { Star, CheckCircle2, ArrowUpRight, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 
+// BARIS PENTING: Mengizinkan halaman baru yang dibuat robot langsung bisa diakses tanpa build ulang
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   return data.map((item) => ({ slug: item.slug }));
 }
@@ -21,6 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function ReviewPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const item = data.find((d) => d.slug === slug);
+  
+  // Jika slug tidak ditemukan di database, tampilkan halaman 404 standar
   if (!item) notFound();
 
   return (
@@ -29,7 +34,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
         <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-luxury-gold">
           <Link href="/">Home</Link>
           <span>/</span>
-          <Link href="/">Reviews</Link>
+          <Link href="/trending">Reviews</Link>
           <span>/</span>
           <span className="text-luxury-dark/40">{item.aiName}</span>
         </div>
@@ -55,7 +60,6 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                 <span className="text-sm font-bold text-luxury-dark/40 uppercase tracking-widest">Industry Standard 2026</span>
               </div>
               
-              {/* TOMBOL OTOMATIS AKTIF */}
               <a 
                 href={item.link || "#"} 
                 target="_blank" 
@@ -74,7 +78,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
           Professional Assessment: {item.aiName} in the Modern Workflow
         </h2>
         <p className="mb-8">
-          In the rapidly consolidating landscape of artificial intelligence, {item.aiName} has emerged as a formidable contender within the {item.category} niche. As we enter 2026, the criteria for selecting professional-grade SaaS tools have shifted from mere functionality to deep integration capabilities and data sovereignty.
+          In the rapidly consolidating landscape of artificial intelligence, {item.aiName} has emerged as a formidable contender within the {item.category} niche.
         </p>
         
         <div className="grid md:grid-cols-2 gap-8 my-16">
@@ -96,16 +100,6 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
             </p>
           </div>
         </div>
-
-        <h3 className="text-2xl font-bold text-luxury-dark mb-6">Scalability and Integration</h3>
-        <p className="mb-8">
-          The true power of {item.aiName} lies in its scalability. For enterprise-level marketing teams or independent software architects, the ability to deploy {item.category} solutions without technical bottlenecks is essential.
-        </p>
-
-        <h3 className="text-2xl font-bold text-luxury-dark mb-6">The Verdict: Investment Value</h3>
-        <p className="mb-8">
-          Concluding our review of {item.aiName}, the investment return for businesses seeking to optimize their {item.category} workflow is evident.
-        </p>
       </article>
     </main>
   );

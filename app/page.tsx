@@ -1,13 +1,11 @@
 import Link from 'next/link';
 import { Sparkles, ArrowRight, ShieldCheck, Zap, Star } from 'lucide-react';
+// MENGHUBUNGKAN KE DATABASE ASLI AGAR TIDAK 404
+import data from '../global-ai.json';
 
 export default function AITechHome() {
-  const featuredTools = [
-    { name: "NeuralWriter AI", cat: "Copywriting", rating: "4.9", desc: "Advanced semantic engine for long-form content generation." },
-    { name: "Visionary Studio", cat: "Video Generation", rating: "4.8", desc: "Transform text prompts into cinematic 4K video assets." },
-    { name: "CodeRefine Pro", cat: "Development", rating: "5.0", desc: "AI-driven code refactoring and security vulnerability patching." },
-    { name: "InsightAnalytica", cat: "Data Science", rating: "4.7", desc: "Predictive modeling for complex enterprise datasets." }
-  ];
+  // Mengambil 4 data terbaru secara dinamis dari database robot
+  const featuredTools = data.slice(0, 4);
 
   return (
     <main className="bg-luxury-pearl">
@@ -28,7 +26,7 @@ export default function AITechHome() {
           Empowering your digital ecosystem with intelligence that exceeds expectations.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Link href="#explore" className="bg-luxury-dark text-white px-10 py-5 rounded-full font-bold hover:bg-luxury-gold transition-all shadow-xl">
+          <Link href="/categories" className="bg-luxury-dark text-white px-10 py-5 rounded-full font-bold hover:bg-luxury-gold transition-all shadow-xl">
             Explore Directory
           </Link>
           <Link href="/trending" className="border border-luxury-gold/30 text-luxury-dark px-10 py-5 rounded-full font-bold hover:bg-luxury-cream transition-all">
@@ -37,7 +35,7 @@ export default function AITechHome() {
         </div>
       </section>
 
-      {/* FEATURED TOOLS GRID (Mobile View Optimized) */}
+      {/* FEATURED TOOLS GRID (Mobile View Optimized) - DATA DINAMIS */}
       <section id="explore" className="max-w-7xl mx-auto px-6 py-24">
         <div className="flex justify-between items-end mb-12">
           <div>
@@ -49,17 +47,18 @@ export default function AITechHome() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredTools.map((tool) => (
-            <div key={tool.name} className="group p-8 bg-white border border-luxury-gold/10 rounded-[2.5rem] hover:shadow-[0_20px_50px_rgba(197,160,89,0.1)] transition-all duration-500 hover:-translate-y-2 gold-gradient-border">
+            <div key={tool.slug} className="group p-8 bg-white border border-luxury-gold/10 rounded-[2.5rem] hover:shadow-[0_20px_50px_rgba(197,160,89,0.1)] transition-all duration-500 hover:-translate-y-2 gold-gradient-border">
               <div className="flex justify-between items-start mb-6">
-                <span className="text-[10px] font-black uppercase tracking-widest px-3 py-1 bg-luxury-cream text-luxury-gold rounded-full">{tool.cat}</span>
+                <span className="text-[10px] font-black uppercase tracking-widest px-3 py-1 bg-luxury-cream text-luxury-gold rounded-full">{tool.category}</span>
                 <div className="flex items-center gap-1 text-luxury-gold">
                   <Star size={12} fill="#C5A059" />
-                  <span className="text-xs font-bold">{tool.rating}</span>
+                  <span className="text-xs font-bold">5.0</span>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-luxury-dark mb-3">{tool.name}</h3>
-              <p className="text-sm text-luxury-dark/50 leading-relaxed mb-8">{tool.desc}</p>
-              <Link href={`/reviews/${tool.name.toLowerCase().replace(/ /g, '-')}`} className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.2em] text-luxury-dark group-hover:text-luxury-gold transition">
+              <h3 className="text-xl font-bold text-luxury-dark mb-3">{tool.aiName}</h3>
+              <p className="text-sm text-luxury-dark/50 leading-relaxed mb-8 line-clamp-2">{tool.usp}</p>
+              {/* LINK INI SUDAH DISINKRONKAN DENGAN SLUG ROBOT AGAR TIDAK 404 */}
+              <Link href={`/reviews/${tool.slug}`} className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.2em] text-luxury-dark group-hover:text-luxury-gold transition">
                 Read Review <ArrowRight size={14} />
               </Link>
             </div>
