@@ -1,5 +1,75 @@
 [
   {
+    "slug": "openai-gpt4o",
+    "aiName": "GPT-4o",
+    "category": "Large Language Model",
+    "usp": "Offers real-time, multimodal processing, surpassing previous models with enhanced conversational AI and intuitive human-computer interaction for seamless, immersive experiences.",
+    "link": "https://openai.com"
+  },
+  {
+    "slug": "anthropic-claude-3",
+    "aiName": "Claude 3",
+    "category": "Large Language Model",
+    "usp": "Provides unparalleled contextual understanding and nuanced reasoning, enabling enterprises to build complex AI-driven workflows and gain deeper insights from unstructured data with enhanced safety and reliability.",
+    "link": "https://www.anthropic.com"
+  },
+  {
+    "slug": "d-id-creative-reality",
+    "aiName": "D-ID Creative Reality Studio",
+    "category": "AI Video Generation",
+    "usp": "Transforms text and images into photorealistic AI presenters, revolutionizing corporate communications, training, and marketing with scalable, personalized video content for impactful engagement.",
+    "link": "https://www.d-id.com"
+  },
+  {
+    "slug": "jasper-ai-for-marketing",
+    "aiName": "Jasper",
+    "category": "AI Marketing Assistant",
+    "usp": "Automates content creation across all marketing channels, leveraging brand-specific AI models to generate high-converting copy and visuals, accelerating content velocity and optimizing marketing ROI.",
+    "link": "https://www.jasper.ai"
+  },
+  {
+    "slug": "midjourney-image-generation",
+    "aiName": "Midjourney",
+    "category": "AI Image Generation",
+    "usp": "Empowers creatives with unparalleled artistic control over AI-generated visuals, facilitating the creation of stunning, hyper-realistic images and concept art with sophisticated style transfer and prompt engineering capabilities.",
+    "link": "https://www.midjourney.com"
+  },
+  {
+    "slug": "murf-ai-voiceover",
+    "aiName": "Murf AI",
+    "category": "AI Voice Generator",
+    "usp": "Delivers lifelike, customizable AI voiceovers for diverse applications, enabling businesses to create professional-grade audio content at scale, enhancing accessibility and engagement across all media formats.",
+    "link": "https://murf.ai"
+  },
+  {
+    "slug": "synthesia-ai-video",
+    "aiName": "Synthesia",
+    "category": "AI Video Generation",
+    "usp": "Enables rapid video creation from text, using AI avatars to deliver engaging presentations and training materials, reducing production costs and time-to-market for enterprise video strategies.",
+    "link": "https://www.synthesia.io"
+  },
+  {
+    "slug": "descript-ai-audio-video",
+    "aiName": "Descript",
+    "category": "AI Audio/Video Editor",
+    "usp": "Streamlines audio and video editing with AI-powered transcription, noise reduction, and content generation, empowering creators to produce professional-quality media faster and more efficiently.",
+    "link": "https://www.descript.com"
+  },
+  {
+    "slug": "runwayml-gen2",
+    "aiName": "RunwayML Gen-2",
+    "category": "AI Video Editing",
+    "usp": "Transforms text and images into compelling video content using advanced AI-driven cinematic tools, empowering creators with sophisticated visual effects and storytelling capabilities for innovative video production.",
+    "link": "https://runwayml.com"
+  },
+  {
+    "slug": "elevenlabs-ai-voice",
+    "aiName": "ElevenLabs",
+    "category": "AI Voice Cloning & Generation",
+    "usp": "Provides ultra-realistic voice cloning and text-to-speech capabilities, empowering content creators with emotionally expressive and contextually appropriate AI voices for engaging storytelling and immersive experiences.",
+    "link": "https://elevenlabs.io"
+  },
+  {
     "slug": "senti-lens-insights",
     "aiName": "SentiLens Insights",
     "category": "Market Research",
