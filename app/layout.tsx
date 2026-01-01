@@ -10,7 +10,9 @@ export const metadata: Metadata = {
   },
   // TAMBAHKAN INI: Merujuk ke file .ico yang sudah Anda ganti namanya
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.ico?v=1",
+    shortcut: "/favicon.ico?v=1",
+    apple: "/favicon.ico?v=1",
   },
 };
 
