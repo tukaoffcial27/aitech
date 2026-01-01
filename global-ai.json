@@ -1,5 +1,75 @@
 [
   {
+    "slug": "senti-lens-insights",
+    "aiName": "SentiLens Insights",
+    "category": "Market Research",
+    "usp": "Uncovers hidden market trends and consumer sentiment shifts with unparalleled accuracy by analyzing multi-modal data streams in real-time, enabling proactive strategic decision-making.",
+    "link": "https://sentilensinsights.ai"
+  },
+  {
+    "slug": "hyper-personalized-edu",
+    "aiName": "HyperEdu",
+    "category": "Education",
+    "usp": "Delivers fully personalized educational experiences by dynamically adapting curriculum, teaching methods, and assessment strategies to each student's unique learning style and cognitive profile.",
+    "link": "https://hyperedu.org"
+  },
+  {
+    "slug": "gen-art-3d-studio",
+    "aiName": "Artifex 3D Studio",
+    "category": "Design",
+    "usp": "Generates high-fidelity 3D models and textures from simple text prompts or 2D sketches, revolutionizing product design and content creation workflows.",
+    "link": "https://artifex3d.com"
+  },
+  {
+    "slug": "legal-eagle-auto-draft",
+    "aiName": "LegalEagle AutoDraft",
+    "category": "Legal",
+    "usp": "Automates the drafting and review of legal documents with advanced AI-powered reasoning, ensuring compliance and minimizing risk with unprecedented speed and precision.",
+    "link": "https://legaleagle.law"
+  },
+  {
+    "slug": "quantum-chem-sim",
+    "aiName": "Q-ChemSim",
+    "category": "Scientific Research",
+    "usp": "Performs highly accurate quantum chemical simulations at scale, accelerating the discovery of new materials, drugs, and energy solutions by predicting molecular properties with unprecedented precision.",
+    "link": "https://qchemsim.science"
+  },
+  {
+    "slug": "global-threat-predictor",
+    "aiName": "Global Threat Predictor (GTP)",
+    "category": "Security",
+    "usp": "Predicts and mitigates emerging cybersecurity threats and physical risks by analyzing global data streams and identifying patterns indicative of potential attacks or disasters.",
+    "link": "https://globalthreatpredictor.net"
+  },
+  {
+    "slug": "precision-farming-ai",
+    "aiName": "AgriPrecise AI",
+    "category": "Agriculture",
+    "usp": "Optimizes agricultural yields and resource utilization by analyzing real-time sensor data and satellite imagery to deliver precise recommendations for irrigation, fertilization, and pest control.",
+    "link": "https://agriprecise.farm"
+  },
+  {
+    "slug": "personalized-health-twin",
+    "aiName": "HealthTwin AI",
+    "category": "Healthcare",
+    "usp": "Creates personalized digital twins of patients based on their medical history and lifestyle, enabling proactive health management and personalized treatment recommendations.",
+    "link": "https://healthtwin.med"
+  },
+  {
+    "slug": "sustainable-energy-optim",
+    "aiName": "EnergiWise Optimizer",
+    "category": "Energy",
+    "usp": "Optimizes energy consumption and production across diverse energy sources (solar, wind, hydro, etc.) to maximize efficiency and reduce carbon footprint by intelligently balancing supply and demand.",
+    "link": "https://energiwise.io"
+  },
+  {
+    "slug": "autonomous-logistics-net",
+    "aiName": "AutoLogistics Network",
+    "category": "Logistics",
+    "usp": "Manages autonomous logistics operations across the supply chain, optimizing routing, warehousing, and delivery to minimize costs and improve efficiency with minimal human intervention.",
+    "link": "https://autologistics.global"
+  },
+  {
     "slug": "chatgpt-professional-review-ai-copywriting",
     "aiName": "ChatGPT",
     "category": "Conversational AI",
