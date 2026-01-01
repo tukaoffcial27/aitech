@@ -2,7 +2,7 @@ name: Daily AI Review Update
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Menjalankan otomatis setiap jam 12 malam
+    - cron: '0 0 */3 * *' # Menjalankan otomatis setiap jam 12 malam
   workflow_dispatch: # Memungkinkan Anda menjalankan manual dari tombol di GitHub
 
 jobs:
