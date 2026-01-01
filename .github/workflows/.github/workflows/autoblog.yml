@@ -1,0 +1,31 @@
+name: Daily AI Review Update
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Menjalankan otomatis setiap jam 12 malam
+  workflow_dispatch: # Memungkinkan Anda menjalankan manual dari tombol di GitHub
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          
+      - name: Install Dependencies
+        run: npm install @google/generative-ai dotenv
+        
+      - name: Run AI Generator
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node generate-blog.mjs
+        
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add global-ai.json
+          git commit -m "Autoblog: Automated AI Review Update" || exit 0
+          git push
