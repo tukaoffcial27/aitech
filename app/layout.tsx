@@ -18,6 +18,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        {/* Google AdSense Script */}
+        <script 
+          async 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6834526241041119"
+          crossOrigin="anonymous"
+        ></script>
+      </head>
       <body className="antialiased">
         {/* NAVIGASI ELEGAN: Perbaikan Struktur Mobile */}
         <nav className="fixed top-0 w-full z-50 bg-luxury-pearl/90 backdrop-blur-md border-b border-luxury-gold/10">
