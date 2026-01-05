@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        {/* Google AdSense Script */}
+        {/* Google AdSense Script Utama */}
         <script 
           async 
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6834526241041119"
@@ -27,16 +27,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         ></script>
       </head>
       <body className="antialiased">
-        {/* NAVIGASI ELEGAN: Perbaikan Struktur Mobile */}
+        {/* NAVIGASI ELEGAN */}
         <nav className="fixed top-0 w-full z-50 bg-luxury-pearl/90 backdrop-blur-md border-b border-luxury-gold/10">
           <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center relative">
-            {/* LOGO: Tetap di Kiri */}
             <Link href="/" className="flex items-center gap-2 z-[80]">
               <span className="text-2xl font-black text-luxury-dark tracking-tighter">AI</span>
               <span className="text-2xl font-light text-luxury-gold tracking-tighter">TECH</span>
             </Link>
             
-            {/* Navigasi Desktop: Hanya muncul di layar besar */}
             <div className="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-luxury-dark/60">
               <Link href="/categories" className="hover:text-luxury-gold transition">Categories</Link>
               <Link href="/trending" className="hover:text-luxury-gold transition">Trending</Link>
@@ -44,16 +42,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/submit" className="px-4 py-2 border border-luxury-gold text-luxury-gold rounded-full hover:bg-luxury-gold hover:text-white transition">Submit Tool</Link>
             </div>
 
-            {/* Navigasi Mobile: Menggunakan Checkbox Trick */}
             <div className="md:hidden flex items-center">
               <input type="checkbox" id="mobile-toggle" className="hidden peer" />
-              
-              {/* Tombol Sandwich */}
               <label htmlFor="mobile-toggle" className="text-luxury-gold cursor-pointer z-[80] p-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
               </label>
-
-              {/* Panel Menu Mobile Overlay */}
               <div className="fixed inset-0 bg-luxury-pearl z-[70] flex flex-col items-center justify-center gap-10 translate-x-full peer-checked:translate-x-0 transition-transform duration-500 ease-in-out">
                 <div className="flex flex-col items-center gap-8">
                   <Link href="/categories" className="text-sm font-black uppercase tracking-[0.3em] text-luxury-dark/40 hover:text-luxury-gold">Categories</Link>
@@ -61,19 +54,31 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <Link href="/about" className="text-sm font-black uppercase tracking-[0.3em] text-luxury-dark/40 hover:text-luxury-gold">About</Link>
                   <Link href="/submit" className="mt-4 px-10 py-4 bg-luxury-gold text-white rounded-full font-bold text-xs uppercase tracking-[0.2em] shadow-xl">Submit Tool</Link>
                 </div>
-                
-                {/* Tombol Tutup */}
-                <label htmlFor="mobile-toggle" className="absolute bottom-12 text-[10px] font-black uppercase tracking-[0.4em] text-luxury-gold border-b border-luxury-gold/20 pb-1">
-                  Close Menu
-                </label>
               </div>
             </div>
           </div>
         </nav>
 
-        {children}
+        <main>
+          {children}
 
-        {/* FOOTER LUXURY: Data Tetap Utuh */}
+          {/* UNIT IKLAN DISPLAY ADSENSE */}
+          <div className="max-w-7xl mx-auto px-6 py-12 w-full overflow-hidden">
+            <ins className="adsbygoogle"
+                 style={{ display: 'block' }}
+                 data-ad-client="ca-pub-6834526241041119"
+                 data-ad-slot="4969932592"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: '(adsbygoogle = window.adsbygoogle || []).push({});',
+              }}
+            />
+          </div>
+        </main>
+
+        {/* FOOTER LUXURY */}
         <footer className="bg-luxury-pearl border-t border-luxury-gold/10 py-20 px-6">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <div className="col-span-2">
