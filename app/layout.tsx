@@ -18,14 +18,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        {/* Google AdSense Script Utama */}
-        <script 
-          async 
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6834526241041119"
-          crossOrigin="anonymous"
-        ></script>
-      </head>
       <body className="antialiased">
         {/* NAVIGASI ELEGAN */}
         <nav className="fixed top-0 w-full z-50 bg-luxury-pearl/90 backdrop-blur-md border-b border-luxury-gold/10">
@@ -61,21 +53,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <main>
           {children}
-
-          {/* UNIT IKLAN DISPLAY ADSENSE */}
-          <div className="max-w-7xl mx-auto px-6 py-12 w-full overflow-hidden">
-            <ins className="adsbygoogle"
-                 style={{ display: 'block' }}
-                 data-ad-client="ca-pub-6834526241041119"
-                 data-ad-slot="4969932592"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script
-              dangerouslySetInnerHTML={{
-                __html: '(adsbygoogle = window.adsbygoogle || []).push({});',
-              }}
-            />
-          </div>
         </main>
 
         {/* FOOTER LUXURY */}
