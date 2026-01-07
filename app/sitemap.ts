@@ -3,7 +3,7 @@ import devToolsData from '../global.json';
 import aiReviewsData from '../global-ai.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://codenify.app'; // Sesuaikan jika domain utama sudah aktif
+  const baseUrl = 'https://aitech.codenify.app'; // Sesuaikan jika domain utama sudah aktif
 
   // 1. Halaman Statis Utama
   const staticPages = [
